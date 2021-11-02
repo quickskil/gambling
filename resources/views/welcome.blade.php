@@ -56,7 +56,8 @@
                                 <table id="myTable" class="display mt-2" >
                                     <thead>
                                     <tr>
-                                        <th>Contact</th>
+                                        <th>Affiliate ID</th>
+                                        <th>Name</th>
                                         <th>Distance (Km)</th>
                                         <th>Actions</th>
                                     </tr>
@@ -65,6 +66,7 @@
 
                                     @foreach($contacts as $contact)
                                         <tr>
+                                            <td>{{$contact['affiliate_id']}}</td>
                                             <td>{{$contact['name']}}</td>
                                             <td>{{round($contact['distance_km'],2)}}</td>
                                             <td><button type="button" class="btn btn-success">Invite</button></td>
